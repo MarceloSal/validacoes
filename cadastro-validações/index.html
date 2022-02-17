@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de clientes</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <img
+          class="logo"
+          src="images/logoOM30.png"
+          alt="logotipo da empresa OM30"
+        />
+      </div>
+      <h1>Realizar Cadastro</h1>
+    </header>
+
+    <div class="container">
+      <form method="get" action="." id="register">
+        <div class="half spacing">
+          <label for="cpf_number">CPF</label>
+          <input
+            class="cpf"
+            type="text"
+            name="cpf_number"
+            id="cpfNumber"
+            placeholder="Digite seu cpf"
+          />
+        </div>
+
+        <div class="half spacing">
+          <label for="name_complete">Nome Completo</label>
+          <input
+            type="text"
+            name="name_complete"
+            id="nameComplete"
+            placeholder="Digite seu nome completo"
+            class="form-control"
+            aria-required="true"
+            aria-invalid="false"
+          />
+        </div>
+
+        <div class="full">
+          <label for="m_name_txt">Nome Completo da mãe</label>
+          <input
+            type="text"
+            name="m_name_txt"
+            id="mNameTxt"
+            placeholder="Digite o nome completo da mãe"
+            class="form-control"
+            aria-required="true"
+            aria-invalid="false"
+          />
+        </div>
+
+        <div class="half spacing">
+          <label for="gender">Sexo</label>
+          <select name="gender" id="gender" aria-checked="true">
+            <option value=""></option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+          </select>
+        </div>
+
+        <div class="half spacing">
+          <label for="birth"> Data de nascimento</label>
+          <input
+            type="text"
+            name="birth"
+            id="birth"
+            data-mask="00/00/0000"
+            placeholder="dd/mm/aaaa"
+            class="form-control"
+            aria-required="true"
+            aria-invalid="false"
+          />
+        </div>
+
+        <div class="half spacing">
+          <label for="tel_number">Telefone </label>
+          <input
+            type="tel"
+            name="tel_number"
+            id="telNumber"
+            data-mask="(00)00000-0000"
+            placeholder="Digite seu telefone com DDD"
+            class="form-control"
+            aria-required="true"
+            aria-invalid="false"
+          />
+        </div>
+
+        <div class="half spacing">
+          <label for="zip_code"> CEP </label>
+          <input
+            type="text"
+            name="zip_code"
+            id="cep"
+            placeholder="Digite seu Cep"
+            data-mask="99999-999"
+            class="form-control"
+            aria-required="true"
+            aria-invalid="false"
+          />
+        </div>
+
+        <div class="full">
+          <label for="adress"> Endereço</label>
+          <input
+            type="text"
+            name="adress"
+            id="rua"
+            placeholder="Digite seu endereço"
+            class="form-control"
+            aria-required="true"
+            aria-invalid="false"
+          />
+        </div>
+
+        <div class="half spacing">
+          <label for="district">Bairro</label>
+          <input
+            type="text"
+            name="district"
+            id="bairro"
+            class="form-control"
+            aria-required="true"
+            aria-invalid="false"
+          />
+        </div>
+
+        <div class="half spacing">
+          <label for="city">Cidade</label>
+          <input
+            type="text"
+            name="city"
+            id="cidade"
+            class="form-control"
+            aria-required="true"
+            aria-invalid="false"
+          />
+        </div>
+
+        <div class="half spacing">
+          <label for="state">Estado</label>
+          <input
+            type="text"
+            name="state"
+            id="uf"
+            data-mask="SS"
+            class="form-control"
+            aria-required="true"
+            aria-invalid="false"
+          />
+        </div>
+
+        <div class="full agreement">
+          <input type="checkbox" name="agreement" id="agreement" />
+          <label for="agreement" id="agreement-label"
+            >Eu li e aceito os <button id="terms">Termos de serviço</button>
+          </label>
+        </div>
+
+        <div id="myModal" class="terms-text">
+          <div class="modal">
+            <span class="close">&times;</span>
+            <p>
+              TERMO DE RESPONSABILIDADE Eu, (nome), (nacionalidade), (estado
+              civil), (profissão), inscrito(a) no CPF sob o nº (informar) e no
+              RG nº (informar), residente e domiciliado(a) à (endereço), na
+              cidade de (informar) - (UF), por meio deste instrumento declaro me
+              responsabilizar pela conservação de um (especifique o bem colocado
+              em guarda), de propriedade de (nome), (nacionalidade), (estado
+              civil), (profissão), inscrito(a) no CPF sob o nº (informar) e no
+              RG nº (informar), pelo prazo de (tempo) dias, a contar desta data.
+              Me comprometo a devolver o mencionado bem em perfeito estado de
+              conservação, como atualmente se encontra, ao fim do prazo
+              estabelecido. Em caso de extravio ou danos que provoquem a perda
+              total ou parcial do bem, fico obrigado a ressarcir o proprietário
+              dos prejuízos ocasionados. (município) - (UF), (dia) de (mês) de
+              (ano). (assinatura) (nome do responsabilizado)
+            </p>
+          </div>
+        </div>
+
+        <div class="full">
+          <input type="submit" id="btn-submit" value="Enviar" />
+        </div>
+      </form>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.cep.js"></script>
+    <script src="js/service-terms.js"></script>
+    <script src="js/jquery.mask.js"></script>
+  </body>
+</html>

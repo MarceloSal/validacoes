@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f4f5;
+  box-sizing: border-box;
+}
+
+.head {
+  width: 100%;
+  background: #00bcd4;
+  display: flex;
+  justify-content: center;
+}
+
+.head img {
+  width: 5%;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input:focus {
+  outline: #006dd4 solid 1px;
+}
+
+.container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(230, 233, 230);
+  border-radius: 1em;
+  padding: 3em;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.half {
+  flex: 1 1 45%;
+  position: relative;
+  padding-bottom: 2em;
+}
+
+.full {
+  flex: 1 1 100%;
+  position: relative;
+  padding-right: 1.5em;
+  padding-bottom: 2em;
+}
+
+select {
+  padding: 0.3em;
+  width: 100%;
+}
+
+.spacing {
+  padding-right: 1.5em;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+input {
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  margin-bottom: 0rem;
+}
+
+input[type="submit"] {
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  height: 3em;
+  opacity: 0.6;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+input[type="submit"]:hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#agreement {
+  margin-right: 1em;
+}
+
+#agreement,
+#agreement-label,
+#terms {
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+
+#terms {
+  border: none;
+  background-color: rgb(206, 191, 191);
+  padding: 0.5em;
+  color: #000;
+}
+
+#terms:hover {
+  cursor: pointer;
+  background-color: #c2f2f8;
+}
+
+.terms-text {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 425px) {
+  label,
+  select {
+    display: block;
+  }
+
+  select {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input,
+  label {
+    text-align: center;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 395px) {
+  .agreement {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 359px) {
+  .agreement {
+    font-size: 0.5em;
+  }
+}
+
+@media (max-width: 292px) {
+  .agreement {
+    font-size: 0.3em;
+  }
+}
