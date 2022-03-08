@@ -12,6 +12,8 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
   </head>
   <body>
     <header>
@@ -26,20 +28,21 @@
     </header>
 
     <div class="container">
-      <form method="get" action="." id="register">
+      <form method="post" action="." >
         <div class="half spacing">
-          <label for="cpf_number">CPF</label>
+          <label for="cpf_number">CPF <span class="priority">*</span></label>
           <input
             class="cpf"
             type="text"
             name="cpf_number"
-            id="cpfNumber"
+            id="cpf"
+            data-mask="999.999.999-99"
             placeholder="Digite seu cpf"
           />
         </div>
 
         <div class="half spacing">
-          <label for="name_complete">Nome Completo</label>
+          <label for="name_complete">Nome Completo <span class="priority">*</span></label>
           <input
             type="text"
             name="name_complete"
@@ -52,11 +55,11 @@
         </div>
 
         <div class="full">
-          <label for="m_name_txt">Nome Completo da mãe</label>
+          <label for="m_name_txt">Nome Completo da mãe <span class="priority">*</span></label>
           <input
             type="text"
             name="m_name_txt"
-            id="mNameTxt"
+            id="motherName"
             placeholder="Digite o nome completo da mãe"
             class="form-control"
             aria-required="true"
@@ -65,7 +68,7 @@
         </div>
 
         <div class="half spacing">
-          <label for="gender">Sexo</label>
+          <label for="gender">Sexo <span class="priority">*</span></label>
           <select name="gender" id="gender" aria-checked="true">
             <option value=""></option>
             <option value="Masculino">Masculino</option>
@@ -74,7 +77,7 @@
         </div>
 
         <div class="half spacing">
-          <label for="birth"> Data de nascimento</label>
+          <label for="birth"> Data de nascimento <span class="priority">*</span></label>
           <input
             type="text"
             name="birth"
@@ -88,7 +91,7 @@
         </div>
 
         <div class="half spacing">
-          <label for="tel_number">Telefone </label>
+          <label for="tel_number">Telefone <span class="priority">*</span> </label>
           <input
             type="tel"
             name="tel_number"
@@ -102,7 +105,7 @@
         </div>
 
         <div class="half spacing">
-          <label for="zip_code"> CEP </label>
+          <label for="zip_code"> CEP <span class="priority">*</span> </label>
           <input
             type="text"
             name="zip_code"
@@ -116,7 +119,7 @@
         </div>
 
         <div class="full">
-          <label for="adress"> Endereço</label>
+          <label for="adress"> Endereço <span class="priority">*</span></label>
           <input
             type="text"
             name="adress"
@@ -129,7 +132,7 @@
         </div>
 
         <div class="half spacing">
-          <label for="district">Bairro</label>
+          <label for="district">Bairro <span class="priority">*</span></label>
           <input
             type="text"
             name="district"
@@ -141,7 +144,7 @@
         </div>
 
         <div class="half spacing">
-          <label for="city">Cidade</label>
+          <label for="city">Cidade <span class="priority">*</span></label>
           <input
             type="text"
             name="city"
@@ -153,7 +156,7 @@
         </div>
 
         <div class="half spacing">
-          <label for="state">Estado</label>
+          <label for="state">Estado <span class="priority">*</span></label>
           <input
             type="text"
             name="state"
@@ -168,7 +171,7 @@
         <div class="full agreement">
           <input type="checkbox" name="agreement" id="agreement" />
           <label for="agreement" id="agreement-label"
-            >Eu li e aceito os <button id="terms">Termos de serviço</button>
+            ><span class="priority">*</span> Eu li e aceito os <button type="button" id="terms">Termos de serviço </button>
           </label>
         </div>
 
